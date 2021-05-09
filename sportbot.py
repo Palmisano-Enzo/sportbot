@@ -1,6 +1,7 @@
 import wikipast as wp
 import text_gen as tg
 
+
 from sys import argv, exit
 import pandas as pd
 from os.path import exists
