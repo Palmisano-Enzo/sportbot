@@ -1,0 +1,152 @@
+Year,City,Sport,Discipline,Athlete,Country,Gender,Event,Medal
+1896,Athènes,Aquatique,Baignade, Alfred Hajos,Hongrie,Men,100M nage libre,Or
+1896,Athènes,Aquatique,Baignade, Otto Herschmann,Autriche,Men,100M nage libre,Argent
+1896,Athènes,Aquatique,Baignade, Dimitrios Drivas,Grèce,Men,100M nage libre pour les marins,Bronze
+1896,Athènes,Aquatique,Baignade, Ioannis Malokinis,Grèce,Men,100M nage libre pour les marins,Or
+1896,Athènes,Aquatique,Baignade, Spiridon Chasapis,Grèce,Men,100M nage libre pour les marins,Argent
+1896,Athènes,Aquatique,Baignade, Efstathios Chorophas,Grèce,Men,1200M nage libre,Bronze
+1896,Athènes,Aquatique,Baignade, Alfred Hajos,Hongrie,Men,1200M nage libre,Or
+1896,Athènes,Aquatique,Baignade, Joannis Andreou,Grèce,Men,1200M nage libre,Argent
+1896,Athènes,Aquatique,Baignade, Efstathios Chorophas,Grèce,Men,400M nage libre,Bronze
+1896,Athènes,Aquatique,Baignade, Paul Neumann,Autriche,Men,400M nage libre,Or
+1896,Athènes,Aquatique,Baignade, Antonios Pepanos,Grèce,Men,400M nage libre,Argent
+1896,Athènes,Athlétisme,Athlétisme, Francis Lane,États-Unis,Men,100M,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Alajos Szokolyi,Hongrie,Men,100M,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Thomas Burke,États-Unis,Men,100M,Or
+1896,Athènes,Athlétisme,Athlétisme, Fritz Hofmann,Allemagne,Men,100M,Argent
+1896,Athènes,Athlétisme,Athlétisme, Thomas Curtis,États-Unis,Men,110M haies,Or
+1896,Athènes,Athlétisme,Athlétisme, Grantley Goulding,Royaume-Uni,Men,110M haies,Argent
+1896,Athènes,Athlétisme,Athlétisme, Albin Lermusiaux,France,Men,1500M,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Edwin Flack,Australie,Men,1500M,Or
+1896,Athènes,Athlétisme,Athlétisme, Arthur Blake,États-Unis,Men,1500M,Argent
+1896,Athènes,Athlétisme,Athlétisme, Charles Gmelin,Royaume-Uni,Men,400M,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Thomas Burke,États-Unis,Men,400M,Or
+1896,Athènes,Athlétisme,Athlétisme, Herbert Jamison,États-Unis,Men,400M,Argent
+1896,Athènes,Athlétisme,Athlétisme, Dimitrios Golemis,Grèce,Men,800M,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Edwin Flack,Australie,Men,800M,Or
+1896,Athènes,Athlétisme,Athlétisme, Nandor Dani,Hongrie,Men,800M,Argent
+1896,Athènes,Athlétisme,Athlétisme, Sotirios Versis,Grèce,Men,Lancer du disque,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Robert Garrett,États-Unis,Men,Lancer du disque,Or
+1896,Athènes,Athlétisme,Athlétisme, Panagiotis Paraskevopoulos,Grèce,Men,Lancer du disque,Argent
+1896,Athènes,Athlétisme,Athlétisme, Ellery Clark,États-Unis,Men,Saut en hauteur,Or
+1896,Athènes,Athlétisme,Athlétisme, James Connolly,États-Unis,Men,Saut en hauteur,Argent
+1896,Athènes,Athlétisme,Athlétisme, Robert Garrett,États-Unis,Men,Saut en hauteur,Argent
+1896,Athènes,Athlétisme,Athlétisme, James Connolly,États-Unis,Men,Saut en longueur,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Ellery Clark,États-Unis,Men,Saut en longueur,Or
+1896,Athènes,Athlétisme,Athlétisme, Robert Garrett,États-Unis,Men,Saut en longueur,Argent
+1896,Athènes,Athlétisme,Athlétisme, Gyula Kellner,Hongrie,Men,Marathon,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Spyridon Louis,Grèce,Men,Marathon,Or
+1896,Athènes,Athlétisme,Athlétisme, Kharilaos Vasilakos,Grèce,Men,Marathon,Argent
+1896,Athènes,Athlétisme,Athlétisme, Evangelos Damaskos,Grèce,Men,Saut à la perche,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Ioannis Theodoropoulos,Grèce,Men,Saut à la perche,Bronze
+1896,Athènes,Athlétisme,Athlétisme, William Welles Hoyt,États-Unis,Men,Saut à la perche,Or
+1896,Athènes,Athlétisme,Athlétisme, Albert Tyler,États-Unis,Men,Saut à la perche,Argent
+1896,Athènes,Athlétisme,Athlétisme, Georgios Papasideris,Grèce,Men,Lancer du poids,Bronze
+1896,Athènes,Athlétisme,Athlétisme, Robert Garrett,États-Unis,Men,Lancer du poids,Or
+1896,Athènes,Athlétisme,Athlétisme, Miltiadis Gouskos,Grèce,Men,Lancer du poids,Argent
+1896,Athènes,Athlétisme,Athlétisme, Ioannis Persakis,Grèce,Men,Triple saut,Bronze
+1896,Athènes,Athlétisme,Athlétisme, James Connolly,États-Unis,Men,Triple saut,Or
+1896,Athènes,Athlétisme,Athlétisme, Alexandre Tufferi,France,Men,Triple saut,Argent
+1896,Athènes,Cyclisme,Route cycliste, Edward Battel,Royaume-Uni,Men,Course sur route individuelle,Bronze
+1896,Athènes,Cyclisme,Route cycliste, Aristidis Konstantinidis,Grèce,Men,Course sur route individuelle,Or
+1896,Athènes,Cyclisme,Route cycliste, August Goedrich,Allemagne,Men,Course sur route individuelle,Argent
+1896,Athènes,Cyclisme,Piste cyclable, Léon Flameng,France,Men,100KM,Or
+1896,Athènes,Cyclisme,Piste cyclable, Georgios Kolettis,Grèce,Men,100KM,Argent
+1896,Athènes,Cyclisme,Piste cyclable, Adolf Schmal,Autriche,Men,10KM,Bronze
+1896,Athènes,Cyclisme,Piste cyclable, Paul Masson,France,Men,10KM,Or
+1896,Athènes,Cyclisme,Piste cyclable, Léon Flameng,France,Men,10KM,Argent
+1896,Athènes,Cyclisme,Piste cyclable, Adolf Schmal,Autriche,Men,Course de 12 heures,Or
+1896,Athènes,Cyclisme,Piste cyclable, Frank Keeping,Royaume-Uni,Men,Course de 12 heures,Argent
+1896,Athènes,Cyclisme,Piste cyclable, Adolf Schmal,Autriche,Men,1KM contre la montre,Bronze
+1896,Athènes,Cyclisme,Piste cyclable, Paul Masson,France,Men,1KM contre la montre,Or
+1896,Athènes,Cyclisme,Piste cyclable, Stamatios Nikolopoulos,Grèce,Men,1KM contre la montre,Argent
+1896,Athènes,Cyclisme,Piste cyclable, Léon Flameng,France,Men,Sprint Indivual,Bronze
+1896,Athènes,Cyclisme,Piste cyclable, Paul Masson,France,Men,Sprint Indivual,Or
+1896,Athènes,Cyclisme,Piste cyclable, Stamatios Nikolopoulos,Grèce,Men,Sprint Indivual,Argent
+1896,Athènes,Clôture,Clôture, Perikles Pierrakos-Mavromichalis,Grèce,Men,Feuille individuelle,Bronze
+1896,Athènes,Clôture,Clôture, Eugène-Henri Gravelotte,France,Men,Feuille individuelle,Or
+1896,Athènes,Clôture,Clôture, Henri Callot,France,Men,Feuille individuelle,Argent
+1896,Athènes,Clôture,Clôture, Leonidas Pyrgos,Grèce,Men,"Feuille d'aluminium, maîtres",Or
+1896,Athènes,Clôture,Clôture, Maurice Perronnet,France,Men,"Feuille d'aluminium, maîtres",Argent
+1896,Athènes,Clôture,Clôture, Holger Nielsen,Danemark,Men,Sabre individuel,Bronze
+1896,Athènes,Clôture,Clôture, Ioannis Georgiadis,Grèce,Men,Sabre individuel,Or
+1896,Athènes,Clôture,Clôture, Telemachos Karakalos,Grèce,Men,Sabre individuel,Argent
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,Barre horizontale,Or
+1896,Athènes,Gymnastique,G. Artistique, Alfred Flatow,Allemagne,Men,Barre horizontale,Argent
+1896,Athènes,Gymnastique,G. Artistique, Alfred Flatow,Allemagne,Men,Barres parallèles,Or
+1896,Athènes,Gymnastique,G. Artistique, Louis Zutter,Suisse,Men,Barres parallèles,Argent
+1896,Athènes,Gymnastique,G. Artistique, Louis Zutter,Suisse,Men,Cheval d'arçon,Or
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,Cheval d'arçon,Argent
+1896,Athènes,Gymnastique,G. Artistique, Petros Persakis,Grèce,Men,Bagues,Bronze
+1896,Athènes,Gymnastique,G. Artistique, Ioannis Mitropoulos,Grèce,Men,Bagues,Or
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,Bagues,Argent
+1896,Athènes,Gymnastique,G. Artistique, Fritz Hofmann,Allemagne,Men,Escalade sur corde,Bronze
+1896,Athènes,Gymnastique,G. Artistique, Nicolaos Andriakopoulos,Grèce,Men,Escalade sur corde,Or
+1896,Athènes,Gymnastique,G. Artistique, Thomasios Xenakis,Grèce,Men,Escalade sur corde,Argent
+1896,Athènes,Gymnastique,G. Artistique, Konrad Böcker,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Alfred Flatow,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Gustav Felix Flatow,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Georg Hilmar,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Fritz Hofmann,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Fritz Manteuffel,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Karl Neukirch,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Richard Röstel,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Gustav Schuft,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Carl Schumann,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,"Équipe, barre horizontale",Or
+1896,Athènes,Gymnastique,G. Artistique, Ioannis Chrysaphis,Grèce,Men,"Équipe, barres parallèles",Bronze
+1896,Athènes,Gymnastique,G. Artistique, Phillippos Karvelas,Grèce,Men,"Équipe, barres parallèles",Bronze
+1896,Athènes,Gymnastique,G. Artistique, Dimitrios Loundras,Grèce,Men,"Équipe, barres parallèles",Bronze
+1896,Athènes,Gymnastique,G. Artistique, Ioannis Mitropoulos,Grèce,Men,"Équipe, barres parallèles",Bronze
+1896,Athènes,Gymnastique,G. Artistique, Konrad Böcker,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Alfred Flatow,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Gustav Felix Flatow,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Georg Hilmar,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Fritz Hofmann,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Fritz Manteuffel,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Karl Neukirch,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Richard Röstel,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Gustav Schuft,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Carl Schumann,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,"Équipe, barres parallèles",Or
+1896,Athènes,Gymnastique,G. Artistique, Nicolaos Andriakopoulos,Grèce,Men,"Équipe, barres parallèles",Argent
+1896,Athènes,Gymnastique,G. Artistique, Spyros Athanasopoulos,Grèce,Men,"Équipe, barres parallèles",Argent
+1896,Athènes,Gymnastique,G. Artistique, Petros Persakis,Grèce,Men,"Équipe, barres parallèles",Argent
+1896,Athènes,Gymnastique,G. Artistique, Thomasios Xenakis,Grèce,Men,"Équipe, barres parallèles",Argent
+1896,Athènes,Gymnastique,G. Artistique, Hermann Weingärtner,Allemagne,Men,Chambre forte,Bronze
+1896,Athènes,Gymnastique,G. Artistique, Carl Schumann,Allemagne,Men,Chambre forte,Or
+1896,Athènes,Gymnastique,G. Artistique, Louis Zutter,Suisse,Men,Chambre forte,Argent
+1896,Athènes,Tirer,Tirer, Nikolaos Morakis,Grèce,Men,Pistolet de l'armée 25M,Bronze
+1896,Athènes,Tirer,Tirer, John Paine,États-Unis,Men,Pistolet de l'armée 25M,Or
+1896,Athènes,Tirer,Tirer, Sumner Paine,États-Unis,Men,Pistolet de l'armée 25M,Argent
+1896,Athènes,Tirer,Tirer, Holger Nielsen,Danemark,Men,Pistolet à tir rapide 25M (60 tirs),Bronze
+1896,Athènes,Tirer,Tirer, Joannis Phrangoudis,Grèce,Men,Pistolet à tir rapide 25M (60 tirs),Or
+1896,Athènes,Tirer,Tirer, Georgios Orphanidis,Grèce,Men,Pistolet à tir rapide 25M (60 tirs),Argent
+1896,Athènes,Tirer,Tirer, Joannis Phrangoudis,Grèce,Men,Pistolet 50M (60 tirs),Bronze
+1896,Athènes,Tirer,Tirer, Sumner Paine,États-Unis,Men,Pistolet 50M (60 tirs),Or
+1896,Athènes,Tirer,Tirer, Holger Nielsen,Danemark,Men,Pistolet 50M (60 tirs),Argent
+1896,Athènes,Tirer,Tirer, Nicolaos Trikupis,Grèce,Men,"Fusil d'assaut, 200M",Bronze
+1896,Athènes,Tirer,Tirer, Pantelis Karasevdas,Grèce,Men,"Fusil d'assaut, 200M",Or
+1896,Athènes,Tirer,Tirer, Pavlos Pavlidis,Grèce,Men,"Fusil d'assaut, 200M",Argent
+1896,Athènes,Tirer,Tirer, Viggo Jensen,Danemark,Men,"Fusil de l'armée, 300M",Bronze
+1896,Athènes,Tirer,Tirer, Georgios Orphanidis,Grèce,Men,"Fusil de l'armée, 300M",Or
+1896,Athènes,Tirer,Tirer, Joannis Phrangoudis,Grèce,Men,"Fusil de l'armée, 300M",Argent
+1896,Athènes,Tennis,Tennis, Edwin Flack,Equipe mixte aux Jeux Olympiques,Men,Doubles,Bronze
+1896,Athènes,Tennis,Tennis, George Stuart Robertson,Equipe mixte aux Jeux Olympiques,Men,Doubles,Bronze
+1896,Athènes,Tennis,Tennis, John Boland,Equipe mixte aux Jeux Olympiques,Men,Doubles,Or
+1896,Athènes,Tennis,Tennis, Friedrich Traun,Equipe mixte aux Jeux Olympiques,Men,Doubles,Or
+1896,Athènes,Tennis,Tennis, Dionysios Kasdaglis,Equipe mixte aux Jeux Olympiques,Men,Doubles,Argent
+1896,Athènes,Tennis,Tennis, Demetrios Petrokokkinos,Equipe mixte aux Jeux Olympiques,Men,Doubles,Argent
+1896,Athènes,Tennis,Tennis, Konstantinos Paspatis,Grèce,Men,Célibataires,Bronze
+1896,Athènes,Tennis,Tennis, Momcsillo Tapavicza,Hongrie,Men,Célibataires,Bronze
+1896,Athènes,Tennis,Tennis, John Boland,Royaume-Uni,Men,Célibataires,Or
+1896,Athènes,Tennis,Tennis, Dionysios Kasdaglis,Grèce,Men,Célibataires,Argent
+1896,Athènes,Haltérophilie,Haltérophilie, Alexandros Nikolopoulos,Grèce,Men,Poids lourd - Levée d'une main,Bronze
+1896,Athènes,Haltérophilie,Haltérophilie, Launceston Elliott,Royaume-Uni,Men,Poids lourd - Levée d'une main,Or
+1896,Athènes,Haltérophilie,Haltérophilie, Viggo Jensen,Danemark,Men,Poids lourd - Levée d'une main,Argent
+1896,Athènes,Haltérophilie,Haltérophilie, Sotirios Versis,Grèce,Men,Poids lourd - Levée à deux mains,Bronze
+1896,Athènes,Haltérophilie,Haltérophilie, Viggo Jensen,Danemark,Men,Poids lourd - Levée à deux mains,Or
+1896,Athènes,Haltérophilie,Haltérophilie, Launceston Elliott,Royaume-Uni,Men,Poids lourd - Levée à deux mains,Argent
+1896,Athènes,Lutte,Lutte Gre-R, Stephanos Christopoulos,Grèce,Men,Evénement ouvert,Bronze
+1896,Athènes,Lutte,Lutte Gre-R, Carl Schumann,Allemagne,Men,Evénement ouvert,Or
+1896,Athènes,Lutte,Lutte Gre-R, Georgios Tsitas,Grèce,Men,Evénement ouvert,Argent

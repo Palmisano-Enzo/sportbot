@@ -1,18 +1,34 @@
 import wikipast as wp
 import text_gen as tg
+import traductor as td
 
 
 from sys import argv, exit
 import pandas as pd
 from os.path import exists
 
+def check_binary_value(param, param_value):
+    if param_value == "1":
+        return True
+    elif param_value == "0":
+        return False
+    else:
+        print("An incorrect parameter value has been encountered for parameter "+param)
+        exit(1)
+def check_required_param(param, value):
+    if not value:
+        print("The "+param+" parameter is required")
+        exit(1)
 def parse_arguments(args):
     input_file = ""
     output_pre_process = ""
     
-    valid_parameter = ["--preprocessing", "--output-file-preprocessing", "--input-file"]
+    valid_parameter = ["--preprocessing", "--output-file-preprocessing", "--input-file", "--translate"]
     need_pre_processing = False
     get_input_file = False
+    need_translation = False
+    jo_type=False
+    jo = ""
     
     if len(args)==1:
         print("More than one parameter is needed")
@@ -29,13 +45,7 @@ def parse_arguments(args):
                 print("Invalid parameter name")
                 exit(1)
             if(arg == "--preprocessing"):
-                if val == "1":
-                    need_pre_processing = True
-                elif val == "0":
-                    need_pre_processing = False
-                else:
-                    print("An incorrect parameter value has been encountered for parameter --preprocessing")
-                    exit(1)
+                need_pre_processing = check_binary_value(arg, val)
             elif (arg ==  "--output-file-preprocessing"):
                 output_pre_process = val
                 
@@ -46,25 +56,37 @@ def parse_arguments(args):
                 
                 input_file = val
                 get_input_file = True
+            elif (arg == "--translate"):
+                need_translation = check_binary_value(arg, val)
                 
-        if not get_input_file:
-            print("The --input-file parameter is required")
-            exit(1)
+            elif(arg == "--jo-type"):
+                if(val == "winter"):
+                    jo = "hiver"
+                elif(val == "summer"):
+                    jo="été"
+                else: 
+                    print("Only the value winter or summer can be given for --jo-type")
+                    exit(1)
+                jo_type = True
+                
+        check_required_param("--input-file", get_input_file)
+        check_required_param("--jo-type", jo_type)
             
-    return need_pre_processing, input_file ,output_pre_process
+    return need_pre_processing, input_file ,output_pre_process, need_translation, jo
 
 def main(argv):
-    need_pre_processing, input_file, output_pre_process = parse_arguments(argv)
+    need_pre_processing, input_file, output_pre_process, need_translation, jo = parse_arguments(argv)
     
     if need_pre_processing:
         if output_pre_process == "":
             out_file="preprocess-"+input_file
         else:
             out_file = output_pre_process
-    #    preprocess()
+        td.processing(input_file, out_file, need_translation)
        
     load_file = out_file if need_pre_processing else input_file
     data = tg.generate_all_lines(load_file)
+    
     # wk.import_data(data)
     
 if __name__ == "__main__":

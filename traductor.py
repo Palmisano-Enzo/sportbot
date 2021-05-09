@@ -8,7 +8,6 @@ def load_frame(filename):
 
 def map_translate(orig, dic):
     return dic[orig]
-    
 
 def unique_translate(df, category):
     df_un = df[[category]]
@@ -31,12 +30,10 @@ def deepl(text_to_translate):
     translate = jsonresponse["translations"][0]["text"]
     return translate 
 
-def translate(summer, winter, dictionary):
+def translate(df, dictionary):
     to_change = ["City", "Sport", "Discipline", "Event", "Medal"]
     for unique_change in to_change:
-        print(unique_change)
-        unique_translate(summer, unique_change)
-        unique_translate(winter, unique_change)
+        unique_translate(df, unique_change)
     unique_translate(dictionary, 'Country')
 
 def replace_country(df, cat):
@@ -106,11 +103,21 @@ def dictionary_correction(dictionary):
     
     
 #####################################
+def processing(filename, outputfile, needTranslation):
+    df =  load_frame(filename)
+    dictionary = load_frame("dictionary_mod.csv")
+    dictionary_correction(dictionary)
+    if(needTranslation):
+        translate(df, dictionary)
+    delete_pending(df)
+    replace_country(df, dictionary)
+    lowercase_name(df)
+    df.to_csv(outputfile, index=False)
+    dictionary.to_csv("dictionary_mod", index=False)
+    
 
-
-summer = load_frame("summer_mod.csv")
-winter = load_frame("winter_mod.csv")
-dictionary = load_frame("dictionary_mod.csv")
+#summer = load_frame("summer_mod.csv")
+#winter = load_frame("winter_mod.csv")
 
 #translate(summer, winter, dictionary)
 #dictionary_correction(dictionary)
@@ -121,6 +128,4 @@ dictionary = load_frame("dictionary_mod.csv")
 #lowercase_name(winter)
 #lowercase_name(summer)
 
-summer.to_csv('summer_mod.csv', index=False)
-winter.to_csv('winter_mod.csv', index=False)
-dictionary.to_csv('dictionary_mod.csv', index=False)
+#winter.to_csv('winter_mod.csv', index=False)
