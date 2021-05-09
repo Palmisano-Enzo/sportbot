@@ -79,21 +79,5 @@ def sort_year(page_name,text, fullText):
     site('edit', title=page_name, text=old_text, token=site.token())
     
     
-    
-    
-    
-    
-    
-def main_process():
-        test_value = {"La Chaux-de-Fonds": ["* [[1896]] / La Chaux-de-Fonds. Obtention permis1", "* [[1897]] / La Chaux-de-Fonds. Obtention permis2", "* [[1898]] / La Chaux-de-Fonds. Obtention permis3"]}
-        
-        input_character(test_value)
-    
-    
-if __name__ == '__main__':
-
-    main_process()
-    
-    
                                      
                         
