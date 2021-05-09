@@ -42,7 +42,7 @@ def get_text_by_country(df, jo):
     for index, row in country_year.iterrows():
         ret = get_count_for_country(df, row["Country"], row["Year"],jo)
         if ret[0]:
-            texts.get(row["Country"],[]).append(ret[1])
+            #texts.get(row["Country"],[]).append(ret[1])
             texts.get(str(row["Year"]),[]).append(ret[1])
             
     return texts
@@ -71,7 +71,7 @@ def get_text_by_athlete(df,jo):
     for index,row in df.iterrows() :
         temp =format_line_player(row["Year"],row["City"],row["Sport"]
                                  ,row["Discipline"],row["Athlete"],row["Country"],row["Event"],row["Medal"],jo)
-        result.get(row["Athlete"],[]).append(temp)
+        #result.get(row["Athlete"],[]).append(temp)
         result.get(srt(row["Year"]),[]).append(temp)
         
     return result
