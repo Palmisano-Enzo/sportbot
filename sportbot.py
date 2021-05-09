@@ -86,7 +86,7 @@ def main(argv):
        
     load_file = out_file if need_pre_processing else input_file
     data = tg.generate_all_lines(load_file,jo)
-    wp.import_data(data)
+    #wp.import_data(data) POur éviter les problèmes
     
 if __name__ == "__main__":
     main(argv)
