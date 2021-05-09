@@ -10,7 +10,7 @@ def get_wiki_text(page, section=None):
     return result['parse']['wikitext']
 
 
-def input_character(data):
+def import_data(data):
     
     for page, text in data.items():
         
