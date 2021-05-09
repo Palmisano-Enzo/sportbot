@@ -23,7 +23,7 @@ def parse_arguments(args):
     input_file = ""
     output_pre_process = ""
     
-    valid_parameter = ["--preprocessing", "--output-file-preprocessing", "--input-file", "--translate"]
+    valid_parameter = ["--preprocessing", "--output-file-preprocessing", "--input-file", "--translate", "--jo-type"]
     need_pre_processing = False
     get_input_file = False
     need_translation = False
@@ -85,9 +85,9 @@ def main(argv):
         td.processing(input_file, out_file, need_translation)
        
     load_file = out_file if need_pre_processing else input_file
-    data = tg.generate_all_lines(load_file)
-    
-    # wk.import_data(data)
+    data = tg.generate_all_lines(load_file,jo)
+    wp.import_data(data)
     
 if __name__ == "__main__":
     main(argv)
+    

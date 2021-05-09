@@ -1,7 +1,9 @@
 import pandas as pd
 
+source = "[https://www.kaggle.com/the-guardian/olympic-games]"
+
 def format_line_country(year, country, host, text, jo):
-    return f"* [[{year}]] / [["+host +f"]] Obtention de "+ text+ " par l'équipe nationale [["+country+"]] aux Jeux olympiques d'"+jo+"."
+    return f"* [[{year}]] / [["+host +f"]]. Obtention de "+ text+ " par l'équipe nationale [["+country+"]] aux Jeux olympiques d'"+jo+"."+source
 
 def text_medal(gold, silver, bronze):
     text =""
@@ -23,9 +25,9 @@ def get_count_for_country(df, country, year, jo):
     
     host = df_filt["City"].values[0]
     
-    count_gold = df_filt.loc[lambda df: df['Medal']=="Or"].count()[0]
-    count_silver = df_filt.loc[lambda df: df['Medal']=="Argent"].count()[0]
-    count_bronze = df_filt.loc[lambda df: df['Medal']=="Bronze"].count()[0]
+    count_gold = df_filt.loc[lambda df: df['Medal']=="or"].count()[0]
+    count_silver = df_filt.loc[lambda df: df['Medal']=="argent"].count()[0]
+    count_bronze = df_filt.loc[lambda df: df['Medal']=="bronze"].count()[0]
     
     if count_bronze == 0 and count_gold == 0 and count_silver == 0:
         return (False,"")
@@ -36,34 +38,50 @@ def get_list_country_year(df):
     df_loc = df[["Country", "Year"]]
     return df_loc.drop_duplicates()
 
+def get_and_add_to_list(dic, key, value):
+    lis = dic.get(key, [])
+    lis.append(value)
+    dic[key]=lis
+
 def get_text_by_country(df, jo):
     texts = {}
     country_year = get_list_country_year(df)
     for index, row in country_year.iterrows():
-        ret = get_count_for_country(df, row["Country"], row["Year"],jo)
+        ret = get_count_for_country(df, row["Country"], row["Year"], jo)
         if ret[0]:
             #texts.get(row["Country"],[]).append(ret[1])
-            texts.get(str(row["Year"]),[]).append(ret[1])
+            get_and_add_to_list(texts, str(row["Year"]), ret[1])
             
     return texts
 
 def load_frame(filename):
     return pd.read_csv(filename)
 
-def generate_all_lines(filename):
+def merge_dict(dic1, dic2):
+    dic3 = dic1.copy()
+    for k,v in dic2.items():
+        if k in dic3:
+            lis = dic3[k]
+            lis.extend(v)
+            dic3[k]=lis
+        else:
+            dic3[k]=v
+    return dic3
+
+def generate_all_lines(filename,jo):
     df = load_frame(filename)
     dic = get_text_by_country(df, jo)
-    dic.update(get_text_by_athlete(df, jo))
+    dic = merge_dict(dic, get_text_by_athlete(df, jo))
     return dic
 
 def format_line_player(year, city, sport, discipline, athlete, country, event, medal, jo) :
-    prefix = "d'" if medal != "Bronze" else "de"
+    prefix = "d'" if medal != "Bronze" else "de "
     needEvent = event != discipline
-    text = f"* [[{year}]] / [[{city}]]."+ f"[[{athlete}]]" + f"Obtention de la médaille "+ prefix+" "+ medal+ f" dans la discipline "+discipline 
+    text = f"* [[{year}]] / [[{city}]]. "+  f"Obtention de la médaille "+ prefix+ medal+ f" par "+f"[[{athlete}]]"+" dans la discipline "+discipline 
     
     if needEvent:
-        text+=+ " et pour l'épreuve" + event 
-    text+= " aux Jeux Olympiques d'"+jo
+        text+= " pour l'épreuve " + event 
+    text+= " aux Jeux Olympiques d'"+jo+"."+source
     return text
 
 def get_text_by_athlete(df,jo):
@@ -72,6 +90,6 @@ def get_text_by_athlete(df,jo):
         temp =format_line_player(row["Year"],row["City"],row["Sport"]
                                  ,row["Discipline"],row["Athlete"],row["Country"],row["Event"],row["Medal"],jo)
         #result.get(row["Athlete"],[]).append(temp)
-        result.get(srt(row["Year"]),[]).append(temp)
+        get_and_add_to_list(result, str(row["Year"]),temp)
         
     return result

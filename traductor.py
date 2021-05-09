@@ -28,7 +28,7 @@ def deepl(text_to_translate):
     response = requests.post('https://api-free.deepl.com/v2/translate', data=data)
     jsonresponse = json.loads(response.text)
     translate = jsonresponse["translations"][0]["text"]
-    return translate 
+    return translate
 
 def translate(df, dictionary):
     to_change = ["City", "Sport", "Discipline", "Event", "Medal"]
