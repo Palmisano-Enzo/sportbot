@@ -2,7 +2,7 @@ from pywikiapi import Site
 
 site = Site('http://wikipast.epfl.ch/wikipast/api.php') # Définition de l'adresse de l'API
 site.no_ssl = True # Désactivation du https, car pas activé sur wikipast
-site.login("User@Name", "Password") # Login du bot
+site.login("AStampbach", "dh2021") # Login du bot
 
 
 def get_wiki_text(page, section=None):
@@ -71,3 +71,17 @@ def sort_year(page_name,text):
             old_text = old_text.replace(previous_line, ourLine + '\n' + previous_line, 1)
             
     site('edit', title=page_name, text=old_text, token=site.token())
+    
+def main_process():
+        test_value = {"Chaux-de-Fonds": ["* [[1896]] / Chaux-de-Fonds. Obtention permis1", "* [[1897]] / Chaux-de-Fonds. Obtention permis2", "* [[1898]] / Chaux-de-Fonds. Obtention permis3"]}
+        
+        input_character(test_value)
+    
+    
+if __name__ == '__main__':
+
+    main_process()
+    
+    
+                                     
+                        
