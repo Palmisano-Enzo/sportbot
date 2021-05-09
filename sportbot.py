@@ -43,7 +43,6 @@ def sort_year(page_name, year, text):
         site('edit', title=page_name, text=text, token=site.token())
         return
     
-   #################################### 
     temp = [None] * len(test_string)
     res = [None] * len(test_string)
     foo = False
