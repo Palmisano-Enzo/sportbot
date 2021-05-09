@@ -5,6 +5,21 @@ site.no_ssl = True # Désactivation du https, car pas activé sur wikipast
 site.login("User@Name", "Password") # Login du bot
 
 
+def format_line_player(year,city,sport,discipline,athlete,country,event,medal) :
+    return f" * [[{year}]] / [[{city}]]."+ f"[[{athlete}]]" + f"Obtention d'une médaille en "+ medal+ f" dans la discipline "discipline + " et pour l'épreuve" + event  
+
+
+def get_text_by_athlete(df):
+    result ={}
+    for index,row in df.iterrows() :
+        temp =format_line_player(row["Year"],row["City"],row["Sport"]
+                                 ,row["Discipline"],row["Athlete"],row["Country"],row["Event"],row["Medal"])
+        result.get(row["Athlete"],[]).append(temp)
+        result.get(row["Year"],[]).append(temp)
+        
+    return result
+
+
 def get_wiki_text(page, section=None):
     result = site('parse', page=page, prop=['wikitext'], section=section)
     return result['parse']['wikitext']
@@ -66,3 +81,9 @@ def sort_year(page_name, year, text):
     else:
         old_text = old_text.replace(previous_line, text + '\n' + previous_line, 1)
     site('edit', title=page_name, text=old_text, token=site.token())
+
+
+
+
+
+    
