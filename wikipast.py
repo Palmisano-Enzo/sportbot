@@ -25,7 +25,7 @@ def import_data(data):
         except ApiError as err:
             if err.data['code'] == 'articleexists':
                 print("The page \"",page,"\" already exist --> modification of the existing page")
-                sort_year(page, text, fullText)
+                sort_by_year(page, text, fullText)
                 return
 
         except Exception as err:
@@ -33,7 +33,7 @@ def import_data(data):
 
         
         
-def sort_year(page_name,text, fullText):
+def sort_by_year(page_name,text, fullText):
     old_text = get_wiki_text(page_name)
 
     # When page is empty, just add content
