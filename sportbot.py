@@ -11,19 +11,21 @@ def get_wiki_text(page, section=None):
 
 
 def input_character(data):
+    
+    for page, text in data.items():
 
-    try:
-        site('edit', title = data[0], text="".join(data.[1]), token=site.token(), createonly=True)
+        try:
+            site('edit', title = page, text="".join(text), token=site.token(), createonly=True)
 
-    except ApiError as err:
-        print('I am inside the exception')
-        if err.data['code'] == 'articleexists':
-            for year, input_text in zip(years, text):
-                sort_year(title, year, input_text)
-            return
+        except ApiError as err:
+            print('I am inside the exception')
+            if err.data['code'] == 'articleexists':
+                for year, input_text in zip(years, text):
+                    sort_year(title, year, input_text)
+                return
 
-    except Exception as err:
-        print('Error :', err)
+        except Exception as err:
+            print('Error :', err)
 
         
         
