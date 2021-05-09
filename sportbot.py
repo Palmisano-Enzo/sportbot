@@ -1,13 +1,62 @@
 from pywikiapi import Site
+import pandas as pd
 
 site = Site('http://wikipast.epfl.ch/wikipast/api.php') # Définition de l'adresse de l'API
 site.no_ssl = True # Désactivation du https, car pas activé sur wikipast
 site.login("User@Name", "Password") # Login du bot
 
+def format_line_country(year, country, host, text):
+    return f"* [[{year}]] / [["+host +f"]] Obtention de "+ text+ " par l'équipe nationale [["+country+"]] aux Jeux olympiques."
+
+def text_medal(gold, silver, bronze):
+    text =""
+    if(gold > 0):
+        text+=f"{gold} médaille(s) d'or"
+    if(silver> 0):
+        if(text!=""):
+            text+=", "
+        text+=f"{silver} médaille(s) d'argent"
+    if(bronze > 0):
+        if(text!=""):
+            text+=", "
+        text+=f"{bronze} médaille(s) de bronze"
+    return text
+
+def get_count_for_country(df, country, year):
+    df_filt =  df.loc[lambda df: df['country'] == country & df['year']==year, :]
+    #host = df_filt[0,]
+    count_gold = df_filt.loc[lambda df: df['Medal']=="Or"].count()
+    count_silver = df_filt.loc[lambda df: df['Medal']=="Argent"].count()
+    count_bronze = df_filt.loc[lambda df: df['Medal']=="Bronze"].count()
+    
+    if count_bronze == 0 and count_gold == 0 and count_silver == 0:
+        return (False,"")
+    else:
+        return (True, format_line_country(year, country ,host, text))
+    
+def get_list_country_year(df):
+    df_loc = df[["Country", "Year"]]
+    return df_loc.drop_duplicates()
+
+def get_text_by_country(df):
+    texts = {}
+    country_year = get_list_country_year(df)
+    for index, row in country_year.iterrows():
+        ret = get_count_for_country(df, row["Country"], row["Year"])
+        if ret[0]:
+            texts.get(row["Country"],[]).append(ret[1])
+            texts.get(row["Year"],[]).append(ret[1])
+            
+    return texts
+
+def load_frame(filename):
+    return pd.from_csv(filename)
+
+def generate_all_lines(df):
+    dic = get_text_by_country(df)
 
 def format_line_player(year,city,sport,discipline,athlete,country,event,medal) :
     return f" * [[{year}]] / [[{city}]]."+ f"[[{athlete}]]" + f"Obtention d'une médaille en "+ medal+ f" dans la discipline "discipline + " et pour l'épreuve" + event  
-
 
 def get_text_by_athlete(df):
     result ={}
@@ -18,7 +67,6 @@ def get_text_by_athlete(df):
         result.get(row["Year"],[]).append(temp)
         
     return result
-
 
 def get_wiki_text(page, section=None):
     result = site('parse', page=page, prop=['wikitext'], section=section)
@@ -40,8 +88,6 @@ def input_character(data):
     except Exception as err:
         print('Error :', err)
 
-        
-        
 def sort_year(page_name, year, text):
     old_text = get_wiki_text(page_name)
 
@@ -81,9 +127,3 @@ def sort_year(page_name, year, text):
     else:
         old_text = old_text.replace(previous_line, text + '\n' + previous_line, 1)
     site('edit', title=page_name, text=old_text, token=site.token())
-
-
-
-
-
-    
