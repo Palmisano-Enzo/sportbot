@@ -1,8 +1,9 @@
-from pywikiapi import Site
+from pywikiapi import Site, ApiError
+import re
 
 site = Site('http://wikipast.epfl.ch/wikipast/api.php') # Définition de l'adresse de l'API
 site.no_ssl = True # Désactivation du https, car pas activé sur wikipast
-site.login("AStampbach", "dh2021") # Login du bot
+site.login("Zouaoui@Che", "c6thfl7oqrpgrlbpp2oa151jt6vl2mck") # Login du bot
 
 
 def get_wiki_text(page, section=None):
@@ -13,14 +14,19 @@ def get_wiki_text(page, section=None):
 def input_character(data):
     
     for page, text in data.items():
+        
+        fullText = ""
+        
+        for line in text:
+            fullText += line + '\n'
 
         try:
-            site('edit', title = page, text="".join(text), token=site.token(), createonly=True)
+            site('edit', title = page, text="".join(fullText), token=site.token(), createonly=True)
 
         except ApiError as err:
-            print('I am inside the exception')
             if err.data['code'] == 'articleexists':
-                sort_year(page, text)
+                print("The page \"",page,"\" already exist --> modification of the existing page")
+                sort_year(page, text, fullText)
                 return
 
         except Exception as err:
@@ -28,12 +34,12 @@ def input_character(data):
 
         
         
-def sort_year(page_name,text):
+def sort_year(page_name,text, fullText):
     old_text = get_wiki_text(page_name)
 
     # When page is empty, just add content
     if not old_text:
-        site('edit', title=page_name, text=text, token=site.token())
+        site('edit', title=page_name, text=fullText, token=site.token())
         return
     
     test_string = old_text.split("\n")
@@ -41,12 +47,12 @@ def sort_year(page_name,text):
     test_string = [x for x in test_string if x.strip().startswith("*")]
     # Page does not contain any valid datafication entries
     if not test_string:
-        site('edit', title=page_name, text=text, token=site.token())
+        site('edit', title=page_name, text=fullText, token=site.token())
         return
     
     for ourLine in text:
         
-        year = int(ourline[4:9])
+        year = int(ourLine[4:8])
         temp = [None] * len(test_string)
         res = [None] * len(test_string)
         foo = False
@@ -72,8 +78,14 @@ def sort_year(page_name,text):
             
     site('edit', title=page_name, text=old_text, token=site.token())
     
+    
+    
+    
+    
+    
+    
 def main_process():
-        test_value = {"Chaux-de-Fonds": ["* [[1896]] / Chaux-de-Fonds. Obtention permis1", "* [[1897]] / Chaux-de-Fonds. Obtention permis2", "* [[1898]] / Chaux-de-Fonds. Obtention permis3"]}
+        test_value = {"La Chaux-de-Fonds": ["* [[1896]] / La Chaux-de-Fonds. Obtention permis1", "* [[1897]] / La Chaux-de-Fonds. Obtention permis2", "* [[1898]] / La Chaux-de-Fonds. Obtention permis3"]}
         
         input_character(test_value)
     
