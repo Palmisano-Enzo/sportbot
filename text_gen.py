@@ -3,7 +3,7 @@ import pandas as pd
 source = "[https://www.kaggle.com/the-guardian/olympic-games]"
 
 def format_line_country(year, country, host, text, jo):
-    return f"* [[{year}]] / [["+host +f"]]. Obtention de "+ text+ " par l'équipe nationale [["+country+"]] aux Jeux olympiques d'"+jo+"."+source
+    return f"* [[{year}]] / [["+host +f"]]. Obtention de "+ text+ " par le pays [["+country+"]] aux Jeux olympiques d'"+jo+"."+source
 
 def text_medal(gold, silver, bronze):
     text =""
