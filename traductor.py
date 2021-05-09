@@ -62,60 +62,64 @@ def manual_change(df):
     print('1')
     #test
     
+def dictionary_correction(dictionary):
+    new_row1 = {'Country': 'Equipe mixte aux Jeux Olympiques', 'Code': 'ZZX', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row2 = {'Country': 'Bohême', 'Code': 'BOH', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row3 = {'Country': 'Australasie', 'Code': 'ANZ', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row4 = {'Country': 'Empire russe', 'Code': 'RU1', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row5 = {'Country': 'Tchécoslovaquie', 'Code': 'TCH', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row6 = {'Country': 'République fédérale de Yougoslavie', 'Code': 'YUG', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row7 = {'Country': 'Roumanie', 'Code': 'ROU', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row8 = {'Country': 'Union des républiques socialistes soviétiques', 'Code': 'URS', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row9 = {'Country': 'Équipe unifiée d\'Allemagne', 'Code': 'EUA', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row10 = {'Country': 'Fédération des Indes occidentales', 'Code': 'BWI', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row11 = {'Country': 'République démocratique allemande', 'Code': 'GDR', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row12 = {'Country': 'République fédérale d\'allemande', 'Code': 'FRG', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row13 = {'Country': 'Équipe unifiée de l\'ex-URSS', 'Code': 'EUN', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row14 = {'Country': 'participants olympiques/paralympiques indépendants', 'Code': 'IOP', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row15 = {'Country': 'Serbie', 'Code': 'SRB', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row16 = {'Country': 'Pays non connu', 'Code': 'PNC', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row17 = {'Country': 'Trinité-et-Tobago', 'Code': 'TTO', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row18 = {'Country': 'Monténégro', 'Code': 'MNE', 'Population': ' ', 'GDP per Capita': ' '}
+    new_row19 = {'Country': 'Singapour', 'Code': 'SGP', 'Population': ' ', 'GDP per Capita': ' '}
+
+    dictionary = dictionary.append(new_row1, ignore_index=True)
+    dictionary = dictionary.append(new_row2, ignore_index=True)
+    dictionary = dictionary.append(new_row3, ignore_index=True)
+    dictionary = dictionary.append(new_row4, ignore_index=True)
+    dictionary = dictionary.append(new_row5, ignore_index=True)
+    dictionary = dictionary.append(new_row6, ignore_index=True)
+    dictionary = dictionary.append(new_row7, ignore_index=True)
+    dictionary = dictionary.append(new_row8, ignore_index=True)
+    dictionary = dictionary.append(new_row9, ignore_index=True)
+    dictionary = dictionary.append(new_row10, ignore_index=True)
+    dictionary = dictionary.append(new_row11, ignore_index=True)
+    dictionary = dictionary.append(new_row12, ignore_index=True)
+    dictionary = dictionary.append(new_row13, ignore_index=True)
+    dictionary = dictionary.append(new_row14, ignore_index=True)
+    dictionary = dictionary.append(new_row15, ignore_index=True)
+    dictionary = dictionary.append(new_row16, ignore_index=True)
+    dictionary = dictionary.append(new_row17, ignore_index=True)
+    dictionary = dictionary.append(new_row18, ignore_index=True)
+    dictionary = dictionary.append(new_row19, ignore_index=True)
+    
+    
+    
 #####################################
 
 
 summer = load_frame("summer_mod.csv")
 winter = load_frame("winter_mod.csv")
 dictionary = load_frame("dictionary_mod.csv")
-new_row1 = {'Country': 'Equipe mixte aux Jeux Olympiques', 'Code': 'ZZX', 'Population': ' ', 'GDP per Capita': ' '}
-new_row2 = {'Country': 'Bohême', 'Code': 'BOH', 'Population': ' ', 'GDP per Capita': ' '}
-new_row3 = {'Country': 'Australasie', 'Code': 'ANZ', 'Population': ' ', 'GDP per Capita': ' '}
-new_row4 = {'Country': 'Empire russe', 'Code': 'RU1', 'Population': ' ', 'GDP per Capita': ' '}
-new_row5 = {'Country': 'Tchécoslovaquie', 'Code': 'TCH', 'Population': ' ', 'GDP per Capita': ' '}
-new_row6 = {'Country': 'République fédérale de Yougoslavie', 'Code': 'YUG', 'Population': ' ', 'GDP per Capita': ' '}
-new_row7 = {'Country': 'Roumanie', 'Code': 'ROU', 'Population': ' ', 'GDP per Capita': ' '}
-new_row8 = {'Country': 'Union des républiques socialistes soviétiques', 'Code': 'URS', 'Population': ' ', 'GDP per Capita': ' '}
-new_row9 = {'Country': 'Équipe unifiée d\'Allemagne', 'Code': 'EUA', 'Population': ' ', 'GDP per Capita': ' '}
-new_row10 = {'Country': 'Fédération des Indes occidentales', 'Code': 'BWI', 'Population': ' ', 'GDP per Capita': ' '}
-new_row11 = {'Country': 'République démocratique allemande', 'Code': 'GDR', 'Population': ' ', 'GDP per Capita': ' '}
-new_row12 = {'Country': 'République fédérale d\'allemande', 'Code': 'FRG', 'Population': ' ', 'GDP per Capita': ' '}
-new_row13 = {'Country': 'Équipe unifiée de l\'ex-URSS', 'Code': 'EUN', 'Population': ' ', 'GDP per Capita': ' '}
-new_row14 = {'Country': 'participants olympiques/paralympiques indépendants', 'Code': 'IOP', 'Population': ' ', 'GDP per Capita': ' '}
-new_row15 = {'Country': 'Serbie', 'Code': 'SRB', 'Population': ' ', 'GDP per Capita': ' '}
-new_row16 = {'Country': 'Pays non connu', 'Code': 'PNC', 'Population': ' ', 'GDP per Capita': ' '}
-new_row17 = {'Country': 'Trinité-et-Tobago', 'Code': 'TTO', 'Population': ' ', 'GDP per Capita': ' '}
-new_row18 = {'Country': 'Monténégro', 'Code': 'MNE', 'Population': ' ', 'GDP per Capita': ' '}
-new_row19 = {'Country': 'Singapour', 'Code': 'SGP', 'Population': ' ', 'GDP per Capita': ' '}
-
-dictionary = dictionary.append(new_row1, ignore_index=True)
-dictionary = dictionary.append(new_row2, ignore_index=True)
-dictionary = dictionary.append(new_row3, ignore_index=True)
-dictionary = dictionary.append(new_row4, ignore_index=True)
-dictionary = dictionary.append(new_row5, ignore_index=True)
-dictionary = dictionary.append(new_row6, ignore_index=True)
-dictionary = dictionary.append(new_row7, ignore_index=True)
-dictionary = dictionary.append(new_row8, ignore_index=True)
-dictionary = dictionary.append(new_row9, ignore_index=True)
-dictionary = dictionary.append(new_row10, ignore_index=True)
-dictionary = dictionary.append(new_row11, ignore_index=True)
-dictionary = dictionary.append(new_row12, ignore_index=True)
-dictionary = dictionary.append(new_row13, ignore_index=True)
-dictionary = dictionary.append(new_row14, ignore_index=True)
-dictionary = dictionary.append(new_row15, ignore_index=True)
-dictionary = dictionary.append(new_row16, ignore_index=True)
-dictionary = dictionary.append(new_row17, ignore_index=True)
-dictionary = dictionary.append(new_row18, ignore_index=True)
-dictionary = dictionary.append(new_row19, ignore_index=True)
-
 
 #translate(summer, winter, dictionary)
-delete_pending(summer)
-delete_pending(winter)
-replace_country(summer, dictionary)
-replace_country(winter, dictionary)
-lowercase_name(winter)
-lowercase_name(summer)
+#dictionary_correction(dictionary)
+#delete_pending(summer)
+#delete_pending(winter)
+#replace_country(summer, dictionary)
+#replace_country(winter, dictionary)
+#lowercase_name(winter)
+#lowercase_name(summer)
 
 summer.to_csv('summer_mod.csv', index=False)
 winter.to_csv('winter_mod.csv', index=False)
