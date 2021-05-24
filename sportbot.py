@@ -85,8 +85,9 @@ def main(argv):
         td.processing(input_file, out_file, need_translation)
        
     load_file = out_file if need_pre_processing else input_file
-    data = tg.generate_all_lines(load_file,jo)
-    #wp.import_data(data) POur éviter les problèmes
+    data = tg.generate_all_lines(load_file, jo)
+    print(data)
+    #wp.import_data(data) #Pour éviter les problèmes
     
 if __name__ == "__main__":
     main(argv)
