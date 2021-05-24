@@ -52,12 +52,38 @@ def reformat_name(text):
     else:
         return text[1]+ " " + text[0].lower().title()
     
+def lowercase(text):
+    return text.lower()
+    
 def lowercase_name(df):
     df["Athlete"] = df["Athlete"].apply(reformat_name)
+    df["Discipline"] =  df["Discipline"].apply(lowercase)
+    df['Sport'] = df['Sport'].apply(lowercase)
+    df['Event'] = df['Event'].apply(lowercase)
+    
     
 def manual_change(df):
-    print('1')
-    #test
+    ###été###
+    df['Discipline'].replace('baignade', 'natation', inplace = True)
+    df['Discipline'].replace('route cycliste', 'cyclisme sur route', inplace = True)
+    df['Discipline'].replace('piste cyclable', 'cyclisme sur piste', inplace = True)
+    df['Sport'].replace('clôture', 'haie', inplace = True)
+    df['Discipline'].replace('clôture', 'haie', inplace = True)
+    df['Sport'].replace('tirer', 'tir sportif', inplace = True)
+    df['Discipline'].replace('tirer', 'tir sportif', inplace = True)
+    df['Discipline'].replace('g. artistique', 'gymnastique artistique', inplace = True)
+    df['Event'].replace('célibataire', 'simple', inplace = True)
+    df['Discipline'].replace('sauter', 'saut équestre d\'obstcale', inplace = True)
+    df['Discipline'].replace('dressage', 'dressage équestre', inplace = True)
+    df['Discipline'].replace('lutte libre.', 'lutte libre', inplace = True)
+    df['Discipline'].replace('tug of war', 'tir à la corde', inplace = True)
+    df['Event'].replace('tug of war', 'tir à la corde', inplace = True)
+    
+    ###hiver###
+    df['Event'].replace('paires', 'couple', inplace = True)
+    df['Event'].replace('five-man', 'quatre hommes', inplace = True)
+    df['Event'].replace('grande colline', 'grand tremplin', inplace = True)
+    df['Event'].replace('petite colline', 'petit tremplin', inplace = True)
     
 def dictionary_correction(dictionary):
     new_row1 = {'Country': 'Equipe mixte aux Jeux Olympiques', 'Code': 'ZZX', 'Population': ' ', 'GDP per Capita': ' '}
@@ -105,27 +131,18 @@ def dictionary_correction(dictionary):
 #####################################
 def processing(filename, outputfile, needTranslation):
     df =  load_frame(filename)
-    dictionary = load_frame("dictionary_mod.csv")
+    dictionary = load_frame("dictionary.csv")
     dictionary_correction(dictionary)
     if(needTranslation):
         translate(df, dictionary)
     delete_pending(df)
     replace_country(df, dictionary)
     lowercase_name(df)
+    manual_change(df)
     df.to_csv(outputfile, index=False)
     dictionary.to_csv("dictionary_mod", index=False)
     
+df = load_frame("winter_mod.csv")
+manual_change(df)
+df.to_csv("winter_mod.csv", index=False)
 
-#summer = load_frame("summer_mod.csv")
-#winter = load_frame("winter_mod.csv")
-
-#translate(summer, winter, dictionary)
-#dictionary_correction(dictionary)
-#delete_pending(summer)
-#delete_pending(winter)
-#replace_country(summer, dictionary)
-#replace_country(winter, dictionary)
-#lowercase_name(winter)
-#lowercase_name(summer)
-
-#winter.to_csv('winter_mod.csv', index=False)
