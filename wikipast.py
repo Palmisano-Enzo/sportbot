@@ -2,7 +2,7 @@ from pywikiapi import Site, ApiError
 import re
 site = Site('http://wikipast.epfl.ch/wikipast/api.php') # Définition de l'adresse de l'API
 site.no_ssl = True # Désactivation du https, car pas activé sur wikipast
-site.login("Zouaoui@Che", "c6thfl7oqrpgrlbpp2oa151jt6vl2mck") # Login du bot
+site.login("AStampbach@sportBot", "d9di5hf0kalr5t75ohj1ij398slv5rkg") # Login du bot
 
 
 def get_wiki_text(page, section=None):
