@@ -26,7 +26,6 @@ def import_data(data):
             if err.data['code'] == 'articleexists':
                 print("The page \"",page,"\" already exist --> modification of the existing page")
                 sort_by_year(page, text, fullText)
-                return
 
         except Exception as err:
             print('Error :', err)

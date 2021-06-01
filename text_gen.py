@@ -5,7 +5,7 @@ nat_team = "Equipe Olympique "
 
 def format_line_country(year, country, host, text, jo):
     # Format the line so that it can easily be added to Wikipast
-    return f"* [[{year}]] / [["+host +f"]]. Obtention de "+ text+ " par la nation [["+country+"]] aux Jeux olympiques d'"+jo+"."+source
+    return f"* [[{year}]] / [["+host +f"]]. Obtention de "+ text+ " par l'[["+nat_team+country+"]] aux Jeux olympiques d'"+jo+"."+source
 
 def text_medal(gold, silver, bronze):
     # Generate a specific text for the medals received by the country
@@ -31,9 +31,9 @@ def get_count_for_country(df, country, year, jo):
     host = df_filt["City"].values[0]
     
     # Count the number of medal per country for a specific year
-    count_gold = df_filt.loc[lambda df: df['Medal']=="or"].count()[0]
-    count_silver = df_filt.loc[lambda df: df['Medal']=="argent"].count()[0]
-    count_bronze = df_filt.loc[lambda df: df['Medal']=="bronze"].count()[0]
+    count_gold = df_filt.loc[lambda df: df['Medal']=="Or"].count()[0]
+    count_silver = df_filt.loc[lambda df: df['Medal']=="Argent"].count()[0]
+    count_bronze = df_filt.loc[lambda df: df['Medal']=="Bronze"].count()[0]
     
     # Return the line for the country 
     if count_bronze == 0 and count_gold == 0 and count_silver == 0:
